@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 
 import AppBar from "@mui/material/AppBar";
@@ -13,24 +14,23 @@ type Route = {
 
 export default function Navbar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{}}>
-        <Toolbar>
-          <Box sx={{ flexGrow: 1, display: "flex" }}>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Undo</Button>
-            <Button color="inherit">Redo</Button>
-            <Button color="inherit">Share</Button>
-            <Button color="inherit">Export</Button>
-            <Box sx={{ flexGrow: 1 }}></Box>
-            <Button color="inherit" sx={{ alignSelf: "flex-end" }}>
-              Profile
-            </Button>
-          </Box>
-          {/* <Typography variant="h6">Home</Typography>
+    <AppBar
+      position="fixed"
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    >
+      <Toolbar>
+        <Box sx={{ flexGrow: 1, display: "flex" }}>
+          <Button color="inherit">Home</Button>
+          <Button color="inherit">Undo</Button>
+          <Button color="inherit">Redo</Button>
+          <Button color="inherit">Share</Button>
+          <Button color="inherit">Export</Button>
+          <Box sx={{ flexGrow: 1 }}></Box>
+          <Button color="inherit">Profile</Button>
+        </Box>
+        {/* <Typography variant="h6">Home</Typography>
           <Typography variant="h6">Home</Typography> */}
-        </Toolbar>
-      </AppBar>
-    </Box>
+      </Toolbar>
+    </AppBar>
   );
 }

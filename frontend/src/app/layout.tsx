@@ -1,9 +1,11 @@
-import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/component/common/Navbar";
 import theme, { roboto } from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
+import Sidebar from "@/component/common/Sidebar";
+import CssBaseLine from "@mui/material/CssBaseline";
+import { Box } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ThemeProvider theme={theme}>
-          <Navbar />
-          {children}
+          <Box sx={{ display: "flex" }}>
+            <CssBaseLine />
+            <Navbar />
+            <Sidebar />
+            {children}
+          </Box>
         </ThemeProvider>
       </body>
     </html>
