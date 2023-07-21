@@ -27,8 +27,10 @@ export default function RootLayout({
             <CssBaseLine />
             <Navbar />
             <Sidebar />
-            <Toolbar />
-            {children}
+            <Box>
+              <Toolbar />
+              {children}
+            </Box>
           </Box>
         </ThemeProvider>
       </body>

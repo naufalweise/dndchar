@@ -4,7 +4,6 @@ import Sidebar from "@/component/common/Sidebar";
 export default function Home() {
   return (
     <Box component="main" sx={{ p: 3 }}>
-      <Toolbar />
       <Typography paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus
