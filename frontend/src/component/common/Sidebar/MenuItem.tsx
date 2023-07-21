@@ -1,10 +1,15 @@
-import Box from "@mui/material/Box";
+import { ListItem, ListItemButton, ListItemText } from "@mui/material";
 
 type Props = {
   children: string;
-  route: string;
 };
 
 export default function MenuItem(props: Props) {
-  return <Box></Box>;
+  return (
+    <ListItem disablePadding>
+      <ListItemButton>
+        <ListItemText>{props.children}</ListItemText>
+      </ListItemButton>
+    </ListItem>
+  );
 }

@@ -7,17 +7,20 @@ import {
   ListItemText,
   Toolbar,
 } from "@mui/material";
+import MenuItem from "./MenuItem";
+
+const sidebarWidth = 100;
 
 export default function Sidebar() {
   return (
     <Drawer
       sx={{
         flexShrink: 0,
-        width: 100,
+        width: sidebarWidth,
         [`& .MuiDrawer-paper`]: {
-          width: 100,
+          width: sidebarWidth,
           boxSizing: "border-box",
-          backgroundColor: "gray",
+          backgroundColor: "secondary.main",
         },
       }}
       variant="permanent"
@@ -25,16 +28,10 @@ export default function Sidebar() {
       <Toolbar />
       <Box sx={{ overflow: "auto" }}>
         <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText>Menu1</ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText>Menu2</ListItemText>
-            </ListItemButton>
-          </ListItem>
+          <MenuItem>Main Sheet</MenuItem>
+          <MenuItem>Inventory</MenuItem>
+          <MenuItem>Spells</MenuItem>
+          <MenuItem>Notes</MenuItem>
         </List>
       </Box>
     </Drawer>
