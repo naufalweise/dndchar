@@ -5,7 +5,7 @@ import theme, { roboto } from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import Sidebar from "@/component/common/Sidebar";
 import CssBaseLine from "@mui/material/CssBaseline";
-import { Box } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +27,7 @@ export default function RootLayout({
             <CssBaseLine />
             <Navbar />
             <Sidebar />
+            <Toolbar />
             {children}
           </Box>
         </ThemeProvider>
