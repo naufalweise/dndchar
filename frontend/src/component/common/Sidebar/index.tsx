@@ -1,3 +1,4 @@
+"use client";
 import Drawer from "@mui/material/Drawer";
 import {
   Box,
@@ -28,10 +29,9 @@ export default function Sidebar() {
       <Toolbar />
       <Box sx={{ overflow: "auto" }}>
         <List>
-          <MenuItem>Main Sheet</MenuItem>
-          <MenuItem>Inventory</MenuItem>
-          <MenuItem>Spells</MenuItem>
-          <MenuItem>Notes</MenuItem>
+          <MenuItem path="/character/mainsheet">Main Sheet</MenuItem>
+          <MenuItem path="/character/inventory">Inventory</MenuItem>
+          <MenuItem path="/character/spells">Spells</MenuItem>
         </List>
       </Box>
     </Drawer>

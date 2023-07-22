@@ -24,6 +24,7 @@ const theme = createTheme({
     },
     paper: {
       main: "#EDEDED",
+      dark: "#3D3D3D",
     },
   },
   typography: {

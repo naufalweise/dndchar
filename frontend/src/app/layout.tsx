@@ -26,11 +26,8 @@ export default function RootLayout({
           <Box sx={{ display: "flex" }}>
             <CssBaseLine />
             <Navbar />
-            <Sidebar />
-            <Box>
-              <Toolbar />
-              {children}
-            </Box>
+            <Toolbar />
+            {children}
           </Box>
         </ThemeProvider>
       </body>
