@@ -8,12 +8,12 @@ type Props = {
 
 export default function MenuItem(props: Props) {
   return (
-    <ListItem disablePadding>
-      <Link to={props.path}>
+    <Link to={props.path}>
+      <ListItem disablePadding>
         <ListItemButton>
           <ListItemText>{props.children}</ListItemText>
         </ListItemButton>
-      </Link>
-    </ListItem>
+      </ListItem>
+    </Link>
   );
 }

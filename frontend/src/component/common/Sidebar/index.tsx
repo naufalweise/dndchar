@@ -29,9 +29,9 @@ export default function Sidebar() {
       <Toolbar />
       <Box sx={{ overflow: "auto" }}>
         <List>
-          <MenuItem path="/character/mainsheet">Main Sheet</MenuItem>
-          <MenuItem path="/character/inventory">Inventory</MenuItem>
-          <MenuItem path="/character/spells">Spells</MenuItem>
+          <MenuItem path="">Main Sheet</MenuItem>
+          <MenuItem path="/inventory">Inventory</MenuItem>
+          <MenuItem path="/spells">Spells</MenuItem>
         </List>
       </Box>
     </Drawer>
