@@ -1,10 +1,16 @@
 import IdentityBox from "@/component/character/box/IdentityBox";
-import { Box, Typography, Card } from "@mui/material";
+import AbilityListBox from "@/component/character/mainsheet/AbilityListBox";
+import { Box, Typography, Card, Grid } from "@mui/material";
 
 export default function MainSheetPane() {
   return (
-    <Box>
-      <IdentityBox />
+    <Grid container gap={2}>
+      <Grid item xs={12}>
+        <IdentityBox />
+      </Grid>
+      <Grid item xs={12}>
+        <AbilityListBox />
+      </Grid>
       <Card>
         <Typography paragraph>
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
@@ -21,6 +27,6 @@ export default function MainSheetPane() {
           posuere sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
       </Card>
-    </Box>
+    </Grid>
   );
 }
